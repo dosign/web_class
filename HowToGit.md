@@ -85,6 +85,8 @@
 
 6. git pull (받기)  [**그래야 충돌나지 않음**]
 
+   - 만약 merge branch 'master' ~ 이라는 에러나면서 빔뜨면 탈출하는 방법은  **:q!**
+
 7. 다른 폴더에서 git clone 처리 후 내용 수정 후
 
 8. git push
