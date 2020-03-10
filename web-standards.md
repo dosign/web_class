@@ -24,9 +24,9 @@
 
   ```html
 <!doctype html>
-<html lang="ko-KR"> // 이 코드의 언어를 한국어로 지정
+<html lang="ko-KR"> <!-- 이 코드의 언어를 한국어로 지정 -->
     <head>
-        <meta charset="UTF-8"/> // 한국어가 포함된 UTF-8로 설정
+        <meta charset="UTF-8"/> <!-- 한국어가 포함된 UTF-8로 설정 -->
         <title>사이트이름</title>
         <style>[css]</style>
     </head>
