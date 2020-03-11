@@ -13,17 +13,102 @@
 	</head>
 	<body>
 		<!--layout ==================== -->
+		<div>
 			<h1>가장중요한제목-하나의 페이지에서 1번만 사용가능</h1>
 			<h2>두번째중요한제목</h2>
 			<h3>세번째중요한제목</h3>
 			<h4>네번째중요한제목</h4>
 			<h5>다섯번째중요한제목</h5>
 			<h6>제목요소 중 가장 낮은 레벨</h6>
-
-			<p>내용을 나타내는 요소, 줄바꿈 띄어쓰기 여러개x</p>
+		</div>
+			<hr /> <!-- 이전과 다음의 내용을 구분 -->
+		<div>
+			<p>내용을 나타내는 요소, 줄바꿈 띄어쓰기 여러개x
+				만약 줄바꿈 필요한 경우 <br />
+				사용한다
+			</p>
 			<pre>내용을 나타내는 또다른 요소,
-줄바꿈처리 가능,      띄어쓰기 처리 마음대로 할 수 있음 하지만 거의 사용x
+				줄바꿈처리 가능,      
+				띄어쓰기 처리 마음대로 할 수 있음 하지만 거의 사용x
+				실제로 불편함이 많아 코드용으로만 사용
+				<!-- entity code -->
+				&lt;h1&gt;제목이 보이게&lt;&sol;h1&gt;
+				&amp; 모양으로 표시됨
+				lt는 <    gt는 >
+				&#8361;
+				&Dopf;&Oopf;&yopf;&iopf;
 			</pre>
+			<blockquote>
+				<!-- 인용문 담는 영역 -->
+				<p>니체는 말했다<q>신은 죽었다</q>라고</p>
+				<!-- p태그 문장으로 묶어주면 한줄 통째로 먹음-->
+				<p><q>악법도 법이다</q></p>
+			</blockquote>
+			
+			<p>
+				<!-- abbr태그는 약어를 설명해줌 (웹상에서 보면 마우스오버시 title에 쓴 내용 표시) -->
+				<abbr title="hyper text markup language">HTML</abbr>의 기능은 구조를 나타내는 것이고,<br />
+				<abbr title="cascading style sheets">CSS</abbr>의 기능은 디자인을 처리하며,<br />
+				<abbr title="javascript">js</abbr>의 기능은 제어를 하는 것이다.
+			</p>
+			<p>강조를 나타내는 요소에는<br />
+				 매우 중요하며 <strong>위험한</strong> 의미 표시방법<br />
+				 <em>권장정도의 중요함</em>을 나타내는 표시방법<br />
+				 해당내용을 해결하여 <del>의미없음</del> 표시방법<br />
+				 <ins>인식의 방향을 잡아주는 용도<ins> 
+			</p>
+			<p>
+				강조의 모양은 동일하지만 기능이 다른 요소<br />
+				<b>굵은 글씨 표시</b>, <i>기울임 표시</i> ,<s>취소선 삽입</s> 
+				또는 <strike>또다른 취소선</strike>, <u>밑줄표시</u> 이런 형태가 있지만
+				s, strike는 html5버전에는 완전히 삭제됨. <span>이외의 b,i,u 태그는 감정의 형태를 취하는 정도[거의 사용x]</span>
+			</p>
+		</div>
+			<hr />
+		<div>
+			<!-- order list -->
+			<ol>
+				<li>목록1</li><li>목록2</li><li>목록3</li><li>목록4</li><li>목록5</li>
+			</ol>
+			<!-- unorder list -->
+			<ul>
+				<li>목록1</li><li>목록2</li><li>목록3</li><li>목록4</li><li>목록5</li>
+			</ul>
+			<!-- data list 제목과 내용이 함께 있는 -->
+			<dl>
+				<dt>리스트의 제목</dt>
+				<dd>리스트의 내용</dd>
+				<dd>리스트의 내용</dd>
+				<dd>리스트의 내용</dd>
+			</dl>
+			<hr />
+
+			<!-- 중첩리스트 -->
+			<ol>
+				<li>목록</li>
+				<li>
+					목록1
+						<ol>
+							<li>목록 1-1</li>
+							<li>목록 1-2</li>
+						</ol>
+				</li>
+				<li>
+					목록2
+					<ul>
+						<li>목록 2-1</li>
+						<li>목록 2-2</li>
+					</ul>
+				</li>
+			</ol>
+		</div>
+			<hr />
+		<div>
+			<!-- img -->
+			<img src="./images.jpg" alt="이미지에 대한 정확하고 의미있는 설명"/>
+			<a href="http://naver.com" target="_blank">네이버로 이동</a>
+			<a href="http://naver.com" target="_self">네이버로 이동</a>
+		</div>
 		<!--script ==================== -->
 		<script></script>
 	</body>
