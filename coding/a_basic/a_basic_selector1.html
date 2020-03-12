@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- a_basic_selector1.html -->
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!--[if IE]>
+			<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+		<![endif]-->
+		<title>Document</title>
+		<!-- css -->
+		<style>
+			@charset "UTF-8";
+			/*reset.css*/
+			html, body {width:100%; height:100%;}
+			html, body, h1, h2, h3, h4, h5, h6, p, div, ul, li, ol, dl, dt, dd{margin:0; padding:0;}
+			ul,ol,li {list-style:none;}
+
+			header,nav,main,section,article,aside,figure,footer{display:block;}
+			/*design*/
+			body{width:100%; height:50px; background-color:#37a;}
+			.wrap{width:800px; height:1200px; background-color:#236;}
+			#headBox{width:800px; heigth:500px; background-color:#fff;}
+			h1{width:200px; height:100px; background-color:#24a; color:#000; font-weight:bold; text-align:center;}
+			.list_01{width:100%; height:auto; background-color:#264;}
+			.list_01 li{width:100%; heigth:20px;
+				 border-bottom-width:1px;
+				 border-bottom-color:#333;
+				 border-bottom-style:solid;}
+			ol{width:80%; height:200px; background-color:#acc;}
+			ol > li{border-bottom-width:2px; border-bottom-color:#f00; border-bottom-style:dotted;}
+		</style>
+	</head>
+	<body>
+		<!-- layout -->
+		<div class="wrap">
+			<header id="headBox">
+				<h1>Dosign</h1>
+				<ul class="list_01">
+					<li>목록1</li>
+					<li>목록2</li>
+					<li>목록3</li>
+				</ul>
+				<ol>
+					<li>목록1</li>
+					<li>목록2</li>
+					<li>목록3</li>
+						<ul>
+							<li>다단목록1</li>
+							<li>다단목록2</li>
+							<li>다단목록3</li>
+							<li>다단목록4</li>
+						</ul>
+				</ol>
+			</header>
+		</div>
+		<footer>
+			
+		</footer>
+		<!-- script -->
+	</body>
+</html>

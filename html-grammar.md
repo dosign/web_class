@@ -17,6 +17,12 @@
 <html lang="ko-KR">
   <head>
     <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!--[if IE]>
+			<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+		<![endif]-->
+      //익스플로우 하위버전도 모두 동일하게 나올 수 있도록 표준으로 맞춰주는 코드
+      
     <title>첫번째 테스트 문서</title>
     <style>
 	h1{background-color:#2233;}

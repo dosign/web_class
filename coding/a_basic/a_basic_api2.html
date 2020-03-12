@@ -1,0 +1,81 @@
+<!doctype html>
+<!-- a_basic_api2.html -->
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--
+		 [if IE]>
+			<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+		 <![endif]-->
+		 <!-- 만약 익스플로우라면 경로로 들어가 하위버전으로 맞춰주는 스크립트 실행시켜줘 -->
+		<title>시멘틱 구조 이해하기</title>
+		<!-- css -->
+		<sytle>
+			
+		</sytle>
+	</head>
+	<body>
+		<!-- layout -->
+		<div>
+			<p>div는 의미없는, 단순히 영역을 나타나게 하는 박스</p>
+			<p><span>span 역시 의미없는 단순한 내용의 그룹</span></p>
+		</div>
+
+		<p>시멘틱 구조</p>
+		<!--  ctrl shift { 는 해당내용 작게 , }는 원상복구-->
+		<header id="headBox">
+			<h1>영역을 나타내는 의미를 가진 구조</h1>
+			<h2>시멘틱 구조에 대해서 알아보자</h2>
+			<p>
+				<strong>header</strong>는 웹페이지 전체 구조를 파악할 수 있는 영역으로 로고/h1/nav를 포함
+			</p>
+			<nav>
+				<h2>navigation</h2>
+				<p>
+					<strong>nav</strong>는 웹페이지 내부에서 클릭하여 해당페이지로 이동하는 모든 링크들의 집합
+				</p>
+			</nav>
+		</header>
+		<main id="mainBox">
+			<p>
+				<strong>main</strong>는 header,footer 제외하고 감싸서 더 큰 영역에 담는 곳
+			</p>
+			<section id="viewBox">
+				<h2>하나의 대표영역</h2>
+				<p>
+					<strong>section</strong>이란 하나의 대표영역으로 다른 내용들과 연계되어 있는 내용들로 구성
+				</p>
+			</section>
+			<article>
+				<h2>연계되어 있지 않아도 되는 독립영역</h2>
+				<p>
+					<strong>article</strong>은 section과 유사한 기능, 대신 연계되어 있지 않아도 되는 독립영역으로 사용가능
+				</p>
+				<figure>
+					<h2>이미지를 담는 영역</h2>
+					<p>
+						<strong>figure</strong>는 이미지 요소를 담아 관리하는 영역
+					</p>
+					<figcaption>이미지제목</figcaption>
+						<img src="images.jpg" alt="figure를 담는 방법 설명하기 위한 내용"/>
+				</figure>
+			</article>
+			<aside>
+				<h2>another영역</h2>
+				<p>
+					<strong>aside</strong>는 없어도 되지만 있다면 도움이 되는 영역
+				</p>
+			</aside>
+		</main>
+		<footer>
+			<h2>사이트정보</h2>
+			<p>
+				<strong>footer</strong>는 회사or사이트 정보를 담는 영역으로 주로 하단에 존재함. 내용이 보이지 않아도 반드시 존재해야함
+			</p>
+		</footer>
+		
+
+		<!-- script -->
+	</body>
+</html>
