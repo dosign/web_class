@@ -1,0 +1,59 @@
+<!doctype html>
+<!-- a_basic_layout01.html -->
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<!--[if IE]>
+			<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+		<![endif]-->
+		<title>Layout연습하기</title>
+		<!-- css -->
+		<style>
+			/* reset.css */
+			html, body{width:100%; height:100%;}
+			html, body, p, div, img, h1, h2, h3, h4, h5, h6, ul, li, ol, dl, dd, dt{margin:0; padding:0%;}
+			ul, li, ol{list-style:none;}
+			header, nav, main, section, article, aside, figure, footer{display:block;}
+			/* design */
+			#box{margin:200px auto; /* 위아래여백200px, 좌우여백은 자동. margin은 공간을 띄우는 역할 */
+				width:600px; height:auto;}
+			#headBox{float:left;width:100%; height:auto; background-color:purple;}
+			#headBox > h1{float:left;width:100px; height:100px; background-color:orange;}
+			#nav_box{float:right; margin-top:50px; width:400px; height:50px; background-color:orange;}
+			#sectionBox{width:100%; height:auto;}
+			.section_child{float:left; width:33.333333%; height:300px;}
+			.article_box{width:66.999999%; height:150px;background-color:darkgreen;}
+			.contain_box{width:66.999999%; height:150px;background-color:yellow;}
+			.aside_box{margin-top:-300px; float:right; background-color:lightgreen;}
+			.pan{clear:both; width:0; height:0;background-color:#fff;}
+			#footBox{width:100%; height:100px; background-color:skyblue;}
+		</style>
+	</head>
+	<body>
+		<!-- layout -->
+		<div id="box">
+			<!-- #headBox -->
+			<header id="headBox">
+				<h1>site</h1>
+				<nav id="nav_box">navigation</nav>
+			</header>
+			<!-- // #headBox -->
+
+			<!-- #sectionBox -->
+			<section id="sectionBox">
+				<article class="article_box section_child">article</article>
+				<article class="contain_box section_child">container</article>
+				<aside class="aside_box section_child">aside</aside>
+			
+				<div class="pan"></div>    
+			</section>
+			<!-- //#sectionBox -->
+
+			<!-- #footBox -->
+			<footer id="footBox">footer</footer>
+			<!-- //#footBox -->
+		</div>
+		<!-- script -->
+	</body>
+</html>
