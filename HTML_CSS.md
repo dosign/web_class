@@ -192,3 +192,62 @@
 
   [다음](http://ui.daum.net/convention/html)
 
+
+
+#### 단위비교
+
+- px : 기본단위
+- % : 부모영역까지 늘어나는 단위
+- pt : graphic [12pt] == web[16px]
+- em : graphic [16px] == web[1em]
+
+
+
+#### display
+
+- block : 한줄 전체를 차지
+
+- inline : 필요한 만큼만 차지. 사이즈를 가질 수 없음. block요소에 포함될 수 있음
+
+  
+
+- float : 공중에 띄우다라는 의미. 부모박스 위에 올라가 쌓일 수 있음
+
+  `height:auto;` 일경우 틈이 생겨 높이가 인식되지 못한다. 
+
+  **이걸 해결해주는 `clear:both;`** 틈이 생긴걸 채워주는 역할! 
+
+  ->새로운 박스를 float 적용시킨 박스 밑에 만들어서 `clear:both;` 스타일 줌 
+
+  ​	(**float,clear 동시에 사용x**)
+
+- min-height : 최소 세로값 / max-height : 최대 세로값
+
+  
+
+#### white space
+
+- margin : 내 주위에 여백주기 / **-값,auto 가능**
+
+- padding : 나한테 직접 여백넣기 / **-값,auto 불가능**
+
+  `border-sizing:content-box` :  여백+박스=여백 준 만큼박스 늘어남
+
+  `border-sizing:border-box` : 여백+박스=그대로 / **겉으로 보기에 크기,위치 변하지 않음**
+
+  
+
+- border : 선 스타일 색상 순서로 한꺼번에 작성가능
+
+- outline : 넷 중 유일하게 부피를 가지지 않음 /  **눈에는 보이지만 주위 박스들이 밀리지 않음**
+
+  `outline-offset:20px;` 20px만큼 띄우고 선처리 
+
+  -> 익스플로우는 지원x / tab키 누르면서 위치 이동시 **focus 잡을 때** 주로 사용
+
+
+
+#### [css참고사이트](https://developer.mozilla.org/ko/) : google에 mdn float 이렇게 검색해도 좋음
+
+
+
