@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- a_basic_base_code_layout_02.html -->
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--[if IE]>
+			<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+		<![endif]-->
+		<title>base_code_layout_02</title>
+		<!-- css -->
+		<style>
+			/* reset.css */
+			html, body{width:100%; height:100%;}
+			html, body, h1, h2, h3, h4, h5, h6, p, pre, img, div, ul, li, ol, dl, dt, dd{margin:0; padding:0;}
+			ul, ol, li{list-style:none;}
+			header, nav, main, section, article, aside, figure, footer{display:block;}
+			/* design */
+			#wrap{margin:auto; width:960px; height:auto; background-color:#3cf;}
+			#headBox{padding:10px; box-sizing:border-box; float:left; width:100%; height:120px; background-color:#f4f;}
+			#headBox > h1{float:left; width:150px; height:100px; background-color:#fff;}
+			.navigationBox{float:right; width:500px; height:120px;}
+			#unb{float:right; width:220px; height:40px; background-color:#fff;}
+			#gnb{float:right; margin-top:10px; width:500px; height:50px; background-color:#fff;}
+			.pan{clear:both; width:0; height:0;}
+			#viewBox{width:100%; height:450px; background-color:#f80;}
+			#contentBox{float:left; width:100%; height:500px; background-color:#2ae;}
+			.content_list{float:left; width:200px; height:100%; background-color:#25e;}
+			.content_list li{margin-bottom:20px; width:100%; height:100px; background-color:#d5e;}
+			.lnb_list{float:right; width:760px; height:200px; background-color:#2c0;}
+			.lnb_content{float:right; width:760px; height:300px; background-color:#243;}
+			.lnb_01{float:left; width:50%; height:100%; background-color:#c83;}
+			.lnb_02{float:left; width:50%; height:100%; background-color:#c43;}
+			#footBox{width:100%; height:130px; background-color:#777;}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+		<!-- #headBox -->
+			<header id="headBox">
+				<h1>h1</h1>
+				<div class="navigationBox">
+					<nav id="unb">unb</nav>
+					<nav id="gnb">gnb</nav>
+				</div>
+				<div class="pan"></div>
+			</header>
+		<!-- //#headBox -->
+		<!-- #viewBodx -->
+			<section id="viewBox">viewBox</section>
+		<!-- //#viewBox -->
+		<!-- #contentBox -->
+			<article id="contentBox">
+				<aside class="content_list">
+					<ul>
+						<li class="list_01">list_01</li>
+						<li class="list_02">list_02</li>
+						<li class="list_03">list_03</li>
+						<li class="list_04">list_04</li>
+					</ul>
+				</aside>
+				<article class="lnb_list">lnb_list</article>
+				<article class="lnb_content">
+					<div class="lnb_01">lnb_01</div>
+					<div class="lnb_02">lnb_02</div>
+				</article>
+			</article>
+			<div class="pan"></div>
+		<!-- //#contentBox -->
+		<!--  #footBox -->
+			<footer id="footBox">footer</footer>
+		<!-- //#footBox -->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<!--[if IE]>
+			<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+		<![endif]-->
+		<title>손코딩 연습</title>
+		<!-- css -->
+		<style>
+			/* reset.css */
+			html, body{width:100%; height:100%;}
+			html, body, h1, h2, h3, h4, h5, h6, p, pre, img, div, ul, ol, li, dl, dt, dd{margin:0; padding:0;}
+			ul, ol, li{list-style:none;}
+			header, nav, main, section, article, aside, figure, footer{display:block;} 
+			
+			/* design */
+			#box{margin:auto; width:600px; height:auto;}
+			#headBox #sectionBox{float:left; width:100%; height:auto; background-color:purple;}
+			#headBox > h1{float:left; width:30%; height:100px; background-color:orange;}
+			#navigation_box{float:left; width:70%; height:100px; background-color:gray;}
+			.pan{clear:both;}
+			.banner_box{width:100%; height:200px; background-color:lightgreen;}
+			.article_box{float:left; width:70%; height:150px; background-color:pink;}
+			.article_list{margin-top:55px; float:left; width:100%; height:50%; background-color:skyblue;}
+			.article_list li{float:left; width:33.333333%; height:100%;}
+			.list_01{background-color:skyblue;}
+			.list_02{border:2px solid blue; box-sizing:border-box;}
+			.list_03{padding:10px;background-color:gray;box-sizing:border-box;}
+			.aside_box{float:left; width:30%; height:150px; background-color:yellow;}
+			#footBox{width:100%; height:100px; background-color:darkblue;}
+
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+		<!-- #headBox -->
+			<header id="headBox">
+				<h1>sitename</h1>
+				<nav id="navigation_box">navigation</nav>
+				<div class="pan"></div>
+			</header>
+		<!-- // #headBox -->
+		<!-- #sectionBox -->
+			<section id="sectionBox">
+				<article class="banner_box">section</article>
+				<article class="article_box">article
+					<ul class="article_list">
+						<li class="list_01">list01</li>
+						<li class="list_02">list02</li>
+						<li class="list_03">list03</li>
+					</ul>
+				</article>
+				<aside class="aside_box">aside</aside>
+				<div class="pan"></div>
+			</section>
+		<!-- // #sectionBox -->
+		<!-- #footBox -->
+			<footer id="footBox">footer</footer>
+		<!-- // #footBox -->
+		</div>
+	</body>
+</html>
