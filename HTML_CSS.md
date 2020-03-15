@@ -197,11 +197,26 @@
 #### 단위비교
 
 - px : 기본단위
+
 - % : 부모영역까지 늘어나는 단위
+
 - pt : graphic [12pt] == web[16px]
+
 - em : graphic [16px] == web[1em]
 
+- rem : root(최상위) em **정확한 폰트나 크기 조정가능** 
 
+- vw(vertical width) & vh(vertical height) : **100분의 1의 단위**
+
+  width:750px; height:900px; == width:10vw; height:100vh
+
+  ex) 스크린 너비값에 꽉 차는 헤드라인을 만들경우,  vw로 폰트 사이즈 지정하면
+
+  브라우저의 너비에 맞춰 변함
+
+- vmin & vmax : 최소값 / 최대값
+
+  
 
 #### display
 
