@@ -258,6 +258,12 @@
 
 - min-height : 최소 세로값 / max-height : 최대 세로값
 
+
+
+#### position
+
+찾아서 내용정리해오기
+
   
 
 #### white space

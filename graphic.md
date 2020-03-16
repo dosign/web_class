@@ -47,6 +47,16 @@
 
 
 
+### ilustrator
+
+##### View
+
+- ctrl + y : 윤곽선만 보이게 
+- alt + shift + ctrl + y : 인쇄용 미리보기
+- alt +  ctrl + y : 웹용 미리보기
+
+
+
 
 
 

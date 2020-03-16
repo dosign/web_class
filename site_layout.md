@@ -67,6 +67,10 @@
    >
    > 누가 들어도 보아도 예상 할 수 있게 적어야 한다.
 
+   **wal-aria** 속성 찾아보기
+
+   
+
 4. css는 `<link rel="stylesheet" href="./css/src/site.css"`/> 불러오기
 
    **css파일은  css/src 만들어서 따로 저장해두기**
