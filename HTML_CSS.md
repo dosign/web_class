@@ -262,7 +262,10 @@
 
 #### position
 
-찾아서 내용정리해오기
+- static : position 속성 부여하지 않았을 때. default
+- relative : 현재 위치에서 상대적인 속성을 줄 수 있음
+- absolute : 가장 가까운 상위 요소를 기준으로 설정됨
+- fixed : 화면이 바뀌더라도 고정된 위치를 설정할 수 있음
 
   
 
