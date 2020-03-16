@@ -27,3 +27,49 @@
 11. [명도확인프그램](https://developer.paciellogroup.com/resources/contrastanalyser/)
 
     CCA-Setup-1.2.1.msi 권장 || CCA-1.2.1.zip부터 받아도 됨
+    
+    
+
+---
+
+
+
+### 사이트 구축 기본사항
+
+1. 사이트 카테고리별로 h1~h6 구분 (gitmind)
+
+2. 기본 세팅 후 큰틀로 영역 나누기
+
+   ```html
+   <body>
+       <div id="wrap">
+           <header id="headBox">
+               <h1>sitename</h1>
+               <nav id="navBox">
+                   <h2>영역마다 제목은 반드시 적어두기</h2>
+           	</nav>
+           </header>
+           <section id="viewBox">
+           </section>
+           <article id="guideBox">
+           </article>
+           <aside id="sideBox">
+           </aside>
+           <footer id="footBox">
+           </footer>
+       </div>
+   </body>
+   ```
+
+3. chrome 확장프로그램 > chromeVox 설치
+
+   > 코드를 소리로 읽어주는 프로그램 
+   >
+   > 누가 들어도 보아도 예상 할 수 있게 적어야 한다.
+
+4. css는 `<link rel="stylesheet" href="./css/src/site.css"`/> 불러오기
+
+   **css파일은  css/src 만들어서 따로 저장해두기**
+
+5. 
+
