@@ -258,14 +258,34 @@
 
 - min-height : 최소 세로값 / max-height : 최대 세로값
 
+  
 
+- **IR기법[image replace]**
+
+  존재는 하지만 화면상에서는 숨김처리하는 기법
+
+  ```css
+  #navigationBox{float:right; width:1420px; height:60px;}
+  #navigationBox>h2{position:absolute; z-index:-1; width:0; height:0; 						 overflow:hidden;}
+  				/* overflow:hidden; 존재는 하지만 화면상에 숨기는 기능 
+  					완벽히 안보이게 하기 위해서 화면 뒤로 완전히 빼줘야 함 [IR기법]
+  					position:absolute; z-index:-1;
+  				*/
+  ```
+
+  
 
 #### position
 
 - static : position 속성 부여하지 않았을 때. default
+
 - relative : 현재 위치에서 상대적인 속성을 줄 수 있음
+
 - absolute : 가장 가까운 상위 요소를 기준으로 설정됨
+
 - fixed : 화면이 바뀌더라도 고정된 위치를 설정할 수 있음
+
+- z-index : 화면상 가장 하단(0)을 기준으로 수치를 지정하여 움직일 수 있음
 
   
 
@@ -292,6 +312,28 @@
 
 
 #### [css참고사이트](https://developer.mozilla.org/ko/) : google에 mdn float 이렇게 검색해도 좋음
+
+
+
+#### 벤더프리픽스(prefix)
+
+> 새로나온 css 기술을 브라우저에 보이지 않을 경우, 강제로 쓸 수 있도록 처리하는 기능
+>
+> 앞뒤로 벤더(-)를 붙여주고 그 안에 해당 브라우저의 형식 기입 [ `position:-webkit-sticky;` ]
+
+- 항상 이렇게 입력하면 번거롭기 때문에 코드 한줄로  적용시킬 수 있음
+
+1. [css3pie](http://css3pie.com/) 다운로드
+
+2. html5shiv 적용했던 방식으로 
+
+   html > `<script src="경로/PIE.js"> `입력
+
+   css  > reset.css 코드 중 `behavior:url('../../경로/PIE.htc');` 입력
+
+
+
+d
 
 
 

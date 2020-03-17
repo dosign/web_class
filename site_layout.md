@@ -75,5 +75,5 @@
 
    **css파일은  css/src 만들어서 따로 저장해두기**
 
-5. 
+5. 코드 작성 후 [유효성 검사](https://validator.kldp.org/#validate_by_input)
 

@@ -4,45 +4,92 @@
 
 /* reset.css */
 	html, body{width:100%; height:100%;}
-	html, body, h1, h2, h3, h4, h5, h6, p, pre, ul, li, ol, dl, dt, dd{margin:0; padding:0; border:0; outline:0;}
+	html, body, h1, h2, h3, h4, h5, h6, p, pre, ul, li, ol, dl, dt, dd{margin:0; padding:0; border:0; outline:0; 
+		behavior:url('../../ie/pie/PIE.htc');}
 	ul, ol, li{list-style:none;}
 	header, nav, main, section, article, aside, figure, footer{display:block;}
 /* design */
-	#wrap{margin:auto; width:1900px; height:auto; min-height:800px; background-color:#ccc;}
+	#wrap{width:1900px; height:auto; min-height:800px; margin:auto; background-color:#ccc;}
 
 	/* #popupBox */
-	#popupBox{width:100%; height:90px; background-color:#777;}
+	#popupBox{display:none; width:100%; height:90px; background-color:#777;}
 
 	/* #headBox */
-	#headBox{width:100%; height:86px; background-color:#333;}
+	#headBox{position:fixed; z-index:700; top:0; left:0; width:inherit; height:86px;
+		padding:14px 60px; box-sizing:border-box; 
+		background-color:rgba(255,255,255,0.7);}
+		/* fixed 쓸 땐 top,left 같이 써주기
+			 width:inherit; 부모와 크기 동일하게 쓰겠다
+		 */
+
+		h1{float:left; width:210px; height:60px; background-color:#333;}
 
 	/* #navigationBox */
-	#navigationBox{display:none;}
+	#navigationBox{float:right; width:1420px; height:60px;}
+	#navigationBox > h2, h3{position:absolute; z-index:-1; width:0; height:0; overflow:hidden;}
+		/* overflow:hidden; 존재는 하지만 화면상에 숨기는 기능 
+			 완벽히 안보이게 하기 위해서 화면 뒤로 완전히 빼줘야 함 [IR기법]
+			 position:absolute; z-index:-1;
+		*/
 
 	/* .gnb */
-	.gnb{}
+	.gnb{float:left; width:900px; height:60px; background-color:#aaa;}
+	.gnb_menu{width:100%; height:100%;}
+	.gnb_menu > li{float:left; width:140px; height:60px; margin:auto 5px; box-sizing:border-box; text-align:center;}
+		.gnb_01{background-color:#fff;}
+		.gnb_02{background-color:#fff;}
+		.gnb_03{background-color:#fff;}
+		.gnb_04{background-color:#fff;}
+		.gnb_05{background-color:#fff;}
+		.gnb_06{background-color:#fff;}
 
 	/* .unb */
-	.unb{}
+	.unb{float:right; width:450px; height:60px; background-color:#777;}
 
-	/* .pan */
-	.pan{}
+	/* 공통으로 적용된 화면에 꽉차는 박스 */
+	.full_size{width:100%; height:900px; padding-top:180px; box-sizing:border-box;}
+		.guide_area{width:1100px; height:550px; margin:auto; text-align:center; background-color:#888;}
+		.guide_area > h2{position:absolute; z-index:-1; width:100%; height:100px; overflow:hidden;text-transform:uppercase;}
+		/* 실제 코딩은 소문자로 써야 뜻대로 읽힘. 결과물만 대문자로 보이도록 설정 */
 
 	/* #viewBox */
-	#viewBox{width:100%; height:714px; background-color:#555;}
+	#viewBox{background-color:#555;}
+		.view_list{width:100%; height:100%; padding-top:30px; box-sizing:border-box;}
+		.view_list > li{margin:auto;}
+			.logo_box{width:50px; height:50px; background-color:#000;}
+			.view_text{width:308px; height:34px; background-color:#555;}
+			.view_image{width:696px; height:345px; background-color:#666;}
 
 	/* #guideBox */
-	#guideBox{width:100%; height:900px; background-color:#aaa;}
+	#guideBox{background-color:#aaa;}
+		.guide_list{width:100%; height:100%; padding-top:30px; box-sizing:border-box;}
+			.guide_title{width:308px; height:88px; margin:auto; background-color:#444;}
+			.guide_menu{float:left; width:100%; height:404px; margin:auto; background-color:#fff;}
+			.guide_reservaion{float:left; width:50%; height:100%; background-color:#555;}
+			.guide_service{float:right; width:50%; height:100%; background-color:#666;}
 
 	/* #saleBox */
-	#saleBox{width:100%; height:900px; background-color:#999;}
+	#saleBox{background-color:#999;}
+		.sale_list{width:100%; height:100%; padding-top:30px; box-sizing:border-box;}
+		.sale_list > li{margin:auto;}
+			.sale_title{width:412px; height:88px; background-color:#222;}
+			.sale_card{float:left; width:33.333333%; height:400px; background-color:#333;}
+			.sale_rental{float:left; width:33.333333%; height:400px; background-color:#555;}
+			.sale_season{float:left; width:33.333333%; height:400px; background-color:#777;}
 
 	/* #newsBox */
-	#newsBox{width:100%; height:900px; background-color:#ddd;}
+	#newsBox{background-color:#ddd;}
+		.news_list{width:100%; height:100%; padding-top:30px; box-sizing:border-box;}
+			.news_list > li{margin:auto;}
+				.news_title{width:412px; height:88px; background-color:#444;}
+				.news_category{width:100%; height:348px; background-color:#666;}
 
 	/* #jisanSideBox */
 	#jisanSideBox{display:none;}
 
+
 	/* #footBox */
 	#footBox{width:100%; height:230px; background-color:#131313;}
+
+	/* position */
 	
