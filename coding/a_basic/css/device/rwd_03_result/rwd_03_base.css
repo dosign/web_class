@@ -1,0 +1,52 @@
+/* rwd_03_base.css */
+
+#wrap {width: 100%; 
+       height:auto;}
+
+#headBox {
+  position: fixed;
+  top:0; left:0;
+  z-index:500;
+
+  width:100%; 
+  height:40px; 
+  height:12.5vw;
+  min-height:40px;
+  min-height:2.5rem;
+    /* rem은 최상위 크기를 상속받아 계산됨 
+       
+    */
+  max-height:60px;
+  max-height:3.75rem;
+  background-color: #333;}
+
+.container{
+  width: 100%; height: 100%; margin: auto;
+  max-width:1200px; max-width:75rem; 
+  background-color: rgba(255,255,255,0.2);
+  }
+
+
+#viewBox {
+  padding-top:60px; 
+  width:100%; 
+  background-color: #ba7;}
+
+#contentBox {
+  width:100%; 
+  background-color: #547D77;}
+
+#infoBox {
+  width:100%; 
+  background-color: #ccc;}
+
+  .infoBox_container{
+    width: 100%; height: 100%; 
+    display: none;}
+  .new_area{background-color: #957de9;}
+  .notice_area{background-color: #95abe9;}
+  .more_content{background-color: #95d2e9;}
+
+#footBox {
+  width:100%; 
+  background-color: #333;}

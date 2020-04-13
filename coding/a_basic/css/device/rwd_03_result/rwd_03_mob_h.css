@@ -1,0 +1,15 @@
+/* rwd_03_mob_h.css */
+
+@media screen and 
+      (min-width:480px) and
+      (max-width:767px) {
+
+  /*#headBox{}*/
+  #viewBox{height: 720px; height:150vw; }
+  #contentBox{ height: 720px;  height:150vw; }
+  #infoBox{ height: 720px; height:150vw; }
+   
+  #footBox{ height: 60px; height:150vw; }
+
+/* @media end */
+}

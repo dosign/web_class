@@ -1,0 +1,27 @@
+/* test.css */
+
+@charset utf-8;
+
+/* reset css */
+html, body{width:100%; height:100%;}
+html, body, h1, h2, h3, h4, h5, h6, p, img, div, ul, li, ol, dl, dt, dd{
+	margin:0; padding:0; outline:0; border:0;
+	behavior:url('../../ie/pie/PIE.htc');}
+ul, ol, li{list-style:none;}
+
+.hidden{display:block; position:absolute; z-index:-1; width:0; height:0; overflow:hidden;}
+
+/* design */
+#wrap{display:flex; flex-direction:column; margin:auto; width:1280px; height:auto;}
+#headBox{display:flex; width:100%; height:100px; background-color:#ccf;}
+#headBox > h1{flex-basis:30%; background-color:white;}
+#naviBox{flex-basis:70%; background-color:black;}
+#viewBox{height:400px; background-color:#f9a;}
+#contentBox{display:flex; width:100%; height:600px; background-color:#a79;}
+.content_list{flex-basis:20%; background-color:orange;}
+	.content_list li{ height:100px; margin-bottom:10px; background-color:white;}
+.cont_area{display:flex; flex-direction:column; flex-basis:80%;}
+	.cont_area > .lnb{height:50%; background-color:#67a;}
+	.cont_area > .lnb_list{height:50%; background-color:#18d;}
+		
+#footBox{width:100%; height:100px; background-color:#ccc;}

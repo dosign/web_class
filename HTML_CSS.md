@@ -226,7 +226,7 @@
 
 - rem : root(최상위) em **정확한 폰트나 크기 조정가능** 
 
-- vw(vertical width) & vh(vertical height) : **100분의 1의 단위**
+- vw(viewport width) & vh(viewport height) : **100분의 1의 단위**
 
   width:750px; height:900px; == width:10vw; height:100vh
 
@@ -311,7 +311,41 @@
 
 
 
+#### filter && transition && transform
+
+```css
+<style>
+    img{
+        transform:scale(1.5);
+        /* 이미지가 1.5배 커져라 */
+    }
+	img{
+        transition:all 1s;
+        /* 
+           모든 효과가 1초동안 부드럽게 적용되어라 
+           transition:font-size 1s, transform 0.1s; 
+           이렇게 각각 지정해줄 수 있음
+        */
+	}
+    img:hover{
+        img{
+            grayscale(100%) blur(3px);
+            /* 
+            	이미지에 마우스를 올려놓았을 때 이미지 흑백+블러처리
+                최신기술이라 적용이 안되는 브라우저 있음
+            */
+        }
+    }
+</sytle>
+```
+
+
+
+
+
 #### [css참고사이트](https://developer.mozilla.org/ko/) : google에 mdn float 이렇게 검색해도 좋음
+
+#### css변환기 : [stylus](https://stylus-lang.com/)
 
 
 
@@ -333,7 +367,135 @@
 
 
 
-d
+#### 반응형 웹 최적화된 `flexbox` 태그 
+
+> `flexbox`란 크기가 동적으로 변할 때 효율적으로 배치,정렬,분산 할 수 있는 방법 
+>
+> 계산없이 요소의 크기와 순서를 유연하게 배치할 수 있다는 장점
+>
+> ie10이상 지원.
+
+- `flexbox` 의 구성
+
+  1. 부모요소 : `flex container`
+
+     ```css
+     .flex_container{
+         display:flex; /* 부모요소에 선언하면 됨 */
+         flex-direciton:row /* 기본값. 왼쪽에서 오른쪽 방향 */
+         flex-direciton:column /* 위에서 아래방향 */
+         flex-wrap:wrap; /* 자식크기가 부모보다 크면 여러줄로 자식배치 */
+         flex-flow: column wrap; 
+         /* direction wrap 함께 사용 가능 */
+            
+     <!-- 수평정렬 -->
+         justify-content:flex-start; /* 기본값. 시작부분 기준으로 정렬 */
+         justify-content:center; /* 중앙을 기준으로 정렬 */
+         justify-content:flex-end; /* 끝부분을 기준으로 정렬 */
+         justify-content:space-around; /* 주축을 기준으로 일정간격 정렬 */
+         justify-content:space-between;
+         /* 여백없이 일정한 간격으로 정렬 */
+         align-content:space-around; 
+         /* 
+            여러줄을 수직정렬 할 경우, 일정한 간격으로 정렬
+            flex-direction:column; 경우, 수직수평 기준 반대로
+            justify-content 속성들과 같음
+         */
+       
+     <!-- 수직정렬(한줄) -->
+         align-items:stretch; /* 부모 전체높이까지 채움 */
+         align-items:flex-start; /* 시작부분기준으로 정렬 */
+         align-items:center; /* 중앙을 기준으로 정렬 */
+         align-items:baseline; /* 글꼴 기준선을 기준으로 정렬 */
+         align-items:flex-end; /* 끝부분기준으로 정렬 */
+     }
+     ```
+
+     
+
+  2. 자식요소 : `flex item`
+
+     ```css
+     .flex_item{
+         flex-grow:1; 
+         /* 
+            flex item의 확장 관련 속성. 0과 양수로 사용.
+            속성값:0이면 부모의 크기가 커져도 자식의 크기는 원래대로 유지
+            부모의 크기가 커질 때 자식의 크기도 커지게 하려면 1이상의 값설정
+         */
+         
+          flex-shrink:1; 
+         /* 
+            flex item의 축소 관련 속성. 0과 양수로 사용. 기본값은 1이다.
+            속성값:0이면 부모크기가 자식크기보다 작아져도 자식크기는 그대로 유지
+            속성값:1이상이면 부모크기에 따라서 자식크기 맞춰 줄어듬
+         */
+         
+         flex-basis:0; 
+         /* 
+            flex item의 기본크기 결정 속성. 기본값은 auto
+            속성값:0이면 절대적으로 부모를 기준으로 크기 결정
+            0으로 설정한다면 flex-basis:0px, flex-basis:0%처럼 단위설정
+            속성값:auto; 상대적으로 콘텐츠 크기를 기준으로 크기 결정
+         */
+         flex:1 1 0; 
+         /* flex-grow flex-shrink flex-basis 순서 == flex:1;*/
+         
+         flex:none;
+         /* 크기가 고정되어야 할 경우 */
+         
+         flex:auto;
+         /* 
+            flex-grow:1; flex-shrink:1; flex-basis:auto; 
+            부모의 크기에 따라 자식크기 변하는 반응형 코드
+         */
+         
+         order:-1;
+         /* 코드를 맨뒤에 써도 제일 첫번째 순서가 됨 */
+         
+         margin:auto; margin-left:auto; margin-right:auto; 
+         margin-top:auto; margin-bottom:auto; 
+         /* 정렬할 때 유용하게 쓰임 */
+         
+     }
+     ```
+
+     
+
+
+#### 반응형 웹 최적화된 `@media` 
+
+```html
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- media query 적용시키려면 써야하는 코드 -->
+</head>
+<style>
+    @media (max-width:500px){background-color:green;}
+    /* width값이 500px까지만 배경색을 초록색으로 */
+    
+     @media (min-width:600px){background-color:blue;}
+    /* width값이 600px 이상부터는 배경색 파랑색으로 */
+</style>
+```
 
 
 
+#### fontello 사용하기
+
+1. [fontello](http://fontello.com/) 에서 필요한 아이콘 다운로드 
+
+2. 다운로드 받으면 demo.html 파일 열기
+
+3. 받은 아이콘별로 entity code 복사 (**코드맨앞 0대신 &#붙여야함**)
+
+4. 
+
+   ```html
+   <link rel="stylesheet" href="css/src/fontello.css">
+   <style>
+   	.content {font-family:"fontello";}
+   </style>
+   ```
+
+    

@@ -19,8 +19,14 @@ a:active {color:#fac;}
 /* common.css */
 .hidden {display:block; position:absolute; z-index:-1;
          width: 0; height: 0; overflow: hidden;}
+  /* 코드상에는 존재하지만 웹상에 눈으로 볼 수 없게 만듦 */
 
 .clearfix:after, .clearfix::after  {
+	/* 가상클래스는 싱글클론(:) 가상요소는 더블클론(::)로 구분 
+		 가상클래스를 만들어 float가 적용된 태그 다음에 오는 태그들이
+		 뭉개지지 않도록 효과를 주는 버그코드	
+		 float를 적용시킨 자식의 부모태그에 써줘야 함 
+	*/
   content:" "; display: block; width: 100%; height: 0; clear:both;}
 
 

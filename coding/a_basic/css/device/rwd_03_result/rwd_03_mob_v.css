@@ -1,0 +1,14 @@
+/* rwd_03_mob_v.css */
+
+@media screen and (max-width:479px) {
+
+  /*#headBox{}*/
+
+  #viewBox{padding-top:12.5vw; height: 480px; height:150vw; }
+  #contentBox{ height: 480px; height:150vw;}
+  #infoBox{ height: 480px; height:150vw;}
+    
+  #footBox{ height: 40px; height:150vw;}
+
+/* @media end */
+}
