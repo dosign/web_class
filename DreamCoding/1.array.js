@@ -8,6 +8,7 @@
 const arrayExam = new Array(); // 비어있는 배열 생성
 arrayExam = new Array(1,2,3); // [1,2,3]
 arrayExam = Array.of(1,2); // [1,2]
+arrayExam = [1,2,3]; // [1,2,3]
 
 const arrayOther = new Array(1,2,3,4); // [1,2,3,4]
 arrayExam = Array.from(arrayOther); // [1,2,3,4]
