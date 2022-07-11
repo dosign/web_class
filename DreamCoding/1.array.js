@@ -19,3 +19,5 @@ arrayExam.from({
     1: '녕',
     length: 2,
 }); 
+
+console.log(arrayExam);
